@@ -2,12 +2,12 @@
 
 ## Finished
 
-- [x] [Grab Paper from BMC](../grab_paper_from_bmc)
+- [x] [Grab Paper from BMC](./grab_paper_from_bmc)
 
 
 ## In Progress
 
-- [ ] [Train Game of Life](../game_of_life)
+- [ ] [Train Game of Life](./game_of_life)
 
 ## TODO
 
