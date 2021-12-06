@@ -2,7 +2,7 @@
 
 ## Finished
 
-- [x] [Grab Paper from BMC](./grab_paper_from_bmc)
+- [x] [Grab Paper from BMC](./grab_papers_from_bmc)
 
 
 ## In Progress
