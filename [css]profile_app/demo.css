@@ -1,0 +1,133 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-color: black;
+    background-color: gray;
+    border-radius: 8px;
+    width: 100px;
+    height:  135px;
+    margin: 0 auto;
+    transition: width 0.48s ease-out, height 0.38s ease-in-out 0.1s;
+    /* transition-property: width ; */
+    overflow: hidden;
+}
+
+#app:hover {
+    width: 200px;
+    height: 340px;
+}
+
+#app:hover #profile-avatar-image {
+    transform: rotate(14400deg);
+}
+
+#app:hover #profile-info {
+    opacity: 1;
+    width: 90px;
+}
+
+#app:hover #app-title-name {
+    width: 60px;
+}
+/* 
+#app:hover #app-body-1-content{
+    height: 60px;
+    opacity: 1;
+}
+
+#app:hover #app-body-2-content{
+    height: 60px;
+    opacity: 1;
+} */
+
+/* #app:hover #app-body-1-title{
+    height: auto;
+    opacity: 1;
+}
+
+#app:hover #app-body-2-title{
+    height: auto;
+    opacity: 1;
+} */
+
+#app-body-1-title, #app-body-2-title {
+    /* background-color: antiquewhite; */
+    margin: 0;
+    padding: 0 5% 0;
+    transition: opacity 0.48s ease-out, height 0.48s ease-out;
+}
+
+#app-body-1-content, #app-body-2-content{
+    /* height: inherit; */
+    /* background-color: aqua; */
+    padding: 8px;
+    height: 60px;
+    transition: opacity 0.48s ease-out, height 0.48s ease-out;
+}
+
+#app-title {
+    width: 100%;
+    max-height: 50%;
+    margin: 0 0 5px;
+    /* padding: 0 0 auto; */
+    border-radius: 8px 8px 0 0;
+    background-color: gainsboro;
+    font-size: 10;
+}
+
+#app-title-name {
+    margin: 0 auto auto 0;
+    text-align: center;
+    /* background-color: azure; */
+    width: inherit;
+    transition: width 0.4s ease-in-out;
+}
+
+#profile {
+    display: flex;
+}
+
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 0;
+    /* background-color: yellow; */
+    width: 0px;
+    transition: width 0.48s ease-out, opacity 0.30s ease-out;
+    margin: 0;
+    padding: 0,0;
+}
+
+#profile-name {
+    width:inherit;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+#profile-description {
+    font-size: 8;
+    padding: 8px;
+    margin: 0;
+    color: whitesmoke;
+}
+
+#profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0;
+}
+
+#profile-avatar-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: transform 10s ease-in;
+}
