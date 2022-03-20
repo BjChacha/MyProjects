@@ -1,11 +1,22 @@
+from ipaddress import ip_address
 import os
-import re
+# import re
+import socket
 import configparser
+
+# def get_ip_address():
+
+#     ipconfig = os.popen('chcp 65001&&ipconfig').read()
+#     ip_address = re.findall('IPv4 Address.*?: (.*?)\n', ipconfig)[0]
+
+#     return ip_address
 
 def get_ip_address():
 
-    ipconfig = os.popen('chcp 65001&&ipconfig').read()
-    ip_address = re.findall('IPv4 Address.*?: (.*?)\n', ipconfig)[0]
+    ip_address = ""
+    with socket.socket(socket.AF_INET,socket.SOCK_DGRAM) as s:
+        s.connect(('8.8.8.8',80))
+        ip_address = s.getsockname()[0]
 
     return ip_address
 
