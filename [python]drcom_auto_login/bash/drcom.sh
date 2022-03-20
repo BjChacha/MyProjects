@@ -5,8 +5,8 @@ password=
 
 while true;
     do
-        ping -c 3 baidu.com > /dev/null
-        if [ $? -eq 0 ]; then
+        # ping -c 3 baidu.com > /dev/null
+        if ! ping -c 2 baidu.com &> /dev/null; then
             echo [`date +"%Y-%m-%d %H:%M:%S"`] Device is online.
         else
             status=0
@@ -23,7 +23,8 @@ while true;
                         echo [`date +"%Y-%m-%d %H:%M:%S"`] Login success.
                     else
                         if [ "$ret_code" == "2" ]; then
-                            echo [`date +"%Y-%m-%d %H:%M:%S"`]  Device already logined.
+                            echo [`date +"%Y-%m-%d %H:%M:%S"`] Device already logined.
+                            break
                         else
                             echo [`date +"%Y-%m-%d %H:%M:%S"`] Login failed. Try again after 15s...
                             sleep 15s
