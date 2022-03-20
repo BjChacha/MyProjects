@@ -14,6 +14,7 @@
 
 ### Bash版本
 
-1. 把`drcom.sh`和`start.sh`两个文件上传到路由器中；
-2. 将`start.sh`设置成开机自启（如openwer可通过编辑`/etc/rc.local`实现）。
-3. 重启路由器，或者直接后台运行脚本`start.sh`。
+1. 编辑`drcom.sh`文件，在相应位置填入校园网账号和密码；
+2. 把`drcom.sh`和`start.sh`两个文件上传到路由器中；
+3. 将`start.sh`设置成开机自启（如openwer可通过编辑`/etc/rc.local`实现）。
+4. 重启路由器，或者直接后台运行脚本`start.sh`。
