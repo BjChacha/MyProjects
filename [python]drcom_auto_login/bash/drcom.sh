@@ -1,8 +1,11 @@
 #! /bin/bash
-
+# ========== ACCOUNT INFO START ==========
 account=
 password=
-
+# =========== ACCOUNT INFO END ===========
+# ========= SCRIPT SETTING START =========
+cd=300
+# ========== SCRIPT SETTING END ==========
 while true;
     do
         if ! ping -c 1 -w 1 baidu.com > /dev/null; then
@@ -31,5 +34,5 @@ while true;
                     fi
                 done
         fi
-        sleep 300s
+        sleep "$cd"s
     done
