@@ -1,12 +1,14 @@
 #! /bin/bash
-
+# ========== ACCOUNT INFO START ==========
 account=
 password=
-
+# =========== ACCOUNT INFO END ===========
+# ========= SCRIPT SETTING START =========
+cd=300
+# ========== SCRIPT SETTING END ==========
 while true;
     do
-        # ping -c 3 baidu.com > /dev/null
-        if ! ping -c 2 baidu.com &> /dev/null; then
+        if ! ping -c 1 -w 1 baidu.com > /dev/null; then
             echo [`date +"%Y-%m-%d %H:%M:%S"`] Device is online.
         else
             status=0
@@ -32,5 +34,5 @@ while true;
                     fi
                 done
         fi
-        sleep 300s
+        sleep "$cd"s
     done
