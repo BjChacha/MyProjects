@@ -6,9 +6,14 @@ import os
 import pickle
 import time
 
+# 对应项在excel中的列下标
+# 购买者姓名
 INDEX_BUYER_NAME = 0
+# 商品姓名
 INDEX_ITEM_NAME = 1
+# 商品地址（仅京东）
 INDEX_ITEM_URL = 2
+# 商品数量
 INDEX_ITEM_NUM = 3;
 
 SHOPPING_BASE_URL = 'https://cart.jd.com/gate.action?pid={0}&pcount={1}&ptype=1'
